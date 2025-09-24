@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Message</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 700px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 10;
+    }
+    .card p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 15px 0;
+    }
+    .card h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: #ff3399;
+    }
+    /* Confetti animation */
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: #ff3399;
+      top: -10px;
+      animation: fall 5s infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Happy Birthday, my dear ❤❤😘😘</h1>
+    <p>Thank you for the cake! 🍰 How was my gift? 🙈 I hope you liked it — I tried my best to make this special for you. 😅 I know I’m not perfect at building websites (of course I used AI 😉); I only learned enough to make this — so please give me a like on LinkedIn. 😒 Anyway, I’m really happy — at least I could give you a gift in a new way. 😜😊 Keep smiling a little more, okay? ❤😁😘</p>
+    <p>I lub you more than you think — your imagination can’t even measure it. 💕😂 I care for you so deeply (and if that ever annoys you, I’m sorry, my sweetheart). 🥲😘 Every morning and every night I think about you and pray for you. I check Snap even when you don’t reply; I still send Good Morning and Good Night every day ❤ because I want all your days and nights to be good. 😂😝 I don’t need replies — I just want you to know your alien is always here for you and always wishing you well. 🌙✨</p>
+    <p>I’m not asking for anything in return — just one small wish from me: please don’t let our bond fade. Keep it colorful. ❤🧡💛💚🩵💙💜🤎🖤🤍🩷</p>
+    <p>With all my lub,<br>Only Chottu’s alien 👽<br>King of the Protozoa Planet 😎👑🛸</p>
+  </div>
+
+  <!-- Confetti pieces -->
+  <script>
+    for (let i = 0; i < 40; i++) {
+      let confetti = document.createElement("div");
+      confetti.classList.add("confetti");
+      confetti.style.left = Math.random() * 100 + "vw";
+      confetti.style.backgroundColor = ["#ff3399", "#ffcc00", "#33ccff", "#66ff66", "#ff6600"][Math.floor(Math.random() * 5)];
+      confetti.style.animationDuration = (3 + Math.random() * 5) + "s";
+      document.body.appendChild(confetti);
+    }
+  </script>
+</body>
+</html>
